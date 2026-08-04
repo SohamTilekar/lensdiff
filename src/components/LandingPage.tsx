@@ -134,7 +134,7 @@ export const LandingPage: React.FC = () => {
           transition={{ delay: 0.1 }}
           className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 max-w-4xl mx-auto leading-[1.1]"
         >
-          See what changed with <span className="bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">precision canvas tools</span>.
+          See what changed with <span className="bg-linear-to-r from-sky-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">precision canvas tools</span>.
         </motion.h1>
 
         {/* Description */}

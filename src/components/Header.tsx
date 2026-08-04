@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
           onClick={() => setView('landing')}
           className="flex items-center gap-2.5 group cursor-pointer text-left"
         >
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-500 via-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
+          <div className="w-8 h-8 rounded-lg bg-linear-to-tr from-sky-500 via-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
             <Sparkles className="w-4 h-4 text-slate-950 stroke-[2.5]" />
           </div>
           <div>
