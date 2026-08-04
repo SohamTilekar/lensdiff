@@ -25,7 +25,7 @@ DiffLens provides a professional-grade image comparison studio directly inside t
 ## Live Application
 
 Try DiffLens directly on GitHub Pages:  
-👉 **[sohamtilekar233.github.io/lensdiff](https://sohamtilekar233.github.io/lensdiff/)**
+👉 **[sohamtilekar.github.io/lensdiff](https://sohamtilekar.github.io/lensdiff/)**
 
 ---
 
