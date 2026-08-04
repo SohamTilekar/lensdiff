@@ -1,79 +1,91 @@
-# 🔍 DiffLens — See What Changed
+<div align="center">
 
-> **A high-performance, 100% static, client-side image comparison web application built for precision visual inspection.**
+  <img src="public/favicon.svg" alt="DiffLens Logo" width="80" height="80" />
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-sky?style=for-the-badge&logo=github)](https://sohamtilekar233.github.io/lensdiff/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](LICENSE)
+  # DiffLens
 
----
+  **A high-performance, 100% static, client-side image comparison web application.**
 
-## 🌐 Live Website & Demo
+  [![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-0284c7?style=flat-square&logo=github)](https://sohamtilekar233.github.io/lensdiff/)
+  [![React Version](https://img.shields.io/badge/React-19.0-61dafb?style=flat-square&logo=react)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+  [![Vite](https://img.shields.io/badge/Vite-6.0-646cff?style=flat-square&logo=vite)](https://vitejs.dev/)
 
-👉 **Try it live on GitHub Pages**: [https://sohamtilekar233.github.io/lensdiff/](https://sohamtilekar233.github.io/lensdiff/)
-
----
-
-## 💡 What is DiffLens & What Problem Does It Solve?
-
-When working on digital design iterations, photo retouching, UI redesigns, or web image compression, identifying subtle visual differences between two image versions can be tedious and prone to human error. Existing tools either require uploading sensitive graphics to external cloud servers, suffer from browser lag when dealing with high-resolution 4K/8K images, or lock essential tools behind paywalls.
-
-**DiffLens solves this by delivering a professional-grade, privacy-first image comparison studio directly inside your browser.** 
-
-### Key Use Cases
-- 🎨 **UI/UX Designers & Frontend Developers**: Compare design mockups (v1 vs. v2) against actual coded implementations to catch pixel-alignment drops or unintended layout shifts.
-- 📸 **Photographers & Digital Retouchers**: Evaluate raw captures against color-graded images, skin retouching layers, or HDR tone-mapping adjustments.
-- 🖼️ **Web & Performance Engineers**: Inspect visual artifacts caused by image compression algorithms (JPEG vs. WebP vs. AVIF) at extreme zoom levels.
-- 🔒 **Privacy-Conscious Teams**: Analyze confidential graphics or unreleased product designs with **100% privacy guarantee** — images are processed entirely in memory via HTML5 Canvas and never uploaded to any backend.
+</div>
 
 ---
 
-## ✨ Key Features & Comparison Modes
+DiffLens provides a professional-grade image comparison studio directly inside the browser. It enables visual inspection of pixel-level differences between before/after image pairs without cloud uploads, external dependencies, or server processing.
 
-### 🎛️ 4 Interactive Visual Inspection Modes
-1. **Split Slider**: Smooth interactive vertical & horizontal divider line. Includes 4 selectable slider styles:
-   - `Default` (Glowing neon blue)
-   - `Solid White` (High-contrast 2px line)
-   - `Solid Black` (Dark-mode 2px line)
-   - `0px Transparent` (Invisible divider with a frosted-glass drag handle)
-2. **Side-by-Side View**: Synchronized dual viewports to inspect two images in parallel.
-3. **Blink Inspection**: Automatically alternates between images at configurable speeds (100ms – 1500ms) to trigger human motion perception for instantaneous anomaly detection.
-4. **Onion-Skin Overlay**: Smooth opacity slider (0% to 100%) to overlay the before and after images with precision transparency.
-
-### 🔍 Precision Pan & Zoom
-- **Synchronized Viewport Navigation**: Scroll or pinch to zoom up to **2000%**, maintaining lock-step alignment across both images.
-- **Auto Fit-to-Screen**: Automatically calculates optimal scale on load to fit your viewport seamlessly.
-
-### 📊 Accurate Metadata Inspector
-- Real-time resolution extraction (width × height px).
-- Aspect ratio calculation.
-- Exact byte size resolution for local files, pasted images, and sample presets.
+> [!IMPORTANT]  
+> **100% Client-Side Privacy Guarantee**: All image rendering, canvas operations, and metadata parsing occur entirely in your local browser memory using HTML5 Canvas & Object URLs. Your images never leave your machine.
 
 ---
 
-## 💻 Developer & Engineering Setup
+## Live Application
 
-### 🏗️ Architecture & Performance Optimizations
-- **On-Demand Canvas Rendering**: Driven by a single `requestAnimationFrame` scheduler triggered strictly on visual state change (preventing continuous idle CPU thrashing).
-- **Cached Canvas Pattern**: Checkerboard transparency backgrounds are pre-rendered into a cached `CanvasPattern` tile rather than thousands of `fillRect` calls per frame.
-- **Base64-Free Memory Management**: File uploads are processed using `URL.createObjectURL(file)` to eliminate memory footprint and tab freezes during 8K image inspection.
-
-### 🛠️ Technology Stack
-- **Core Framework**: React 19 + TypeScript
-- **Build Tool**: Vite 6
-- **Styling**: Tailwind CSS v4
-- **State Management**: Zustand
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
+Try DiffLens directly on GitHub Pages:  
+👉 **[sohamtilekar233.github.io/lensdiff](https://sohamtilekar233.github.io/lensdiff/)**
 
 ---
 
-## 🚀 Running Locally
+## Problem & Overview
 
-### 1. Prerequisites
-- **Node.js**: v18.0.0 or higher
-- **npm**: v9.0.0 or higher
+When working on digital design iterations, photo color grading, UI redesigns, or web image compression, identifying subtle visual differences between image versions can be tedious and error-prone.
 
-### 2. Installation
+DiffLens addresses this by providing:
+
+- **UI/UX Design Inspection**: Compare design mockups (v1 vs. v2) against coded frontend implementations to identify alignment shifts or missing padding.
+- **Photo Retouching**: Compare raw captures against color-graded images or retouching layers.
+- **Image Compression Analysis**: Inspect compression artifacts (JPEG vs. WebP vs. AVIF) at extreme zoom levels.
+- **Privacy-First Inspection**: Analyze confidential graphics or unreleased product designs securely offline.
+
+---
+
+## Features & Comparison Modes
+
+### Comparison Modes
+
+- **Split Slider**: Vertical and horizontal split-screen divider with 4 line style options:
+  - `Default`: Glowing cyan divider.
+  - `Solid White`: 2px white divider.
+  - `Solid Black`: 2px black divider.
+  - `0px Transparent`: Invisible line with a frosted-glass drag handle.
+- **Side-by-Side View**: Dual locked viewports for synchronized parallel inspection.
+- **Blink Mode**: Automatically alternates between images at configurable speeds (100ms – 1500ms) to leverage human motion perception for anomaly detection.
+- **Onion-Skin Overlay**: Opacity slider (0% to 100%) for smooth layer blending.
+
+### Viewport & Tools
+
+- **Synchronized Pan & Zoom**: Zoom up to **2000%** with synchronized lock-step pan across viewports.
+- **Fit to Screen**: Automatic scale calculation on image load.
+- **Metadata Inspector**: Displays image resolution, aspect ratio, MIME type, and exact file size in bytes.
+
+---
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+| :--- | :--- |
+| `1` | Switch to Split Slider mode |
+| `2` | Switch to Side-by-Side mode |
+| `3` | Switch to Blink mode |
+| `4` | Switch to Onion-Skin mode |
+| `S` | Swap Before and After images |
+| `0` | Reset zoom / Fit image to screen |
+| `Ctrl + K` / `Cmd + K` | Open Command Palette |
+
+---
+
+## Local Development
+
+### Prerequisites
+
+- Node.js v18.0.0 or higher
+- npm v9.0.0 or higher
+
+### Setup
+
 ```bash
 # Clone the repository
 git clone https://github.com/sohamtilekar233/lensdiff.git
@@ -81,47 +93,38 @@ cd lensdiff
 
 # Install dependencies
 npm install
-```
 
-### 3. Development Server
-```bash
+# Start local development server
 npm run dev
 ```
-Open `http://localhost:5173` in your browser.
 
-### 4. Build & Preview
-```bash
-# Compile TypeScript & production bundle
-npm run build
+> [!TIP]
+> The development server will run at `http://localhost:5173`.
 
-# Preview production build locally
-npm run preview
-```
+### Available Scripts
 
----
-
-## 📦 Deploying to GitHub Pages (`gh-pages` Branch)
-
-This project supports two deployment methods to the `gh-pages` branch:
-
-### Option A: Automatic Deployment via GitHub Actions (Recommended)
-Every push to the `main` branch automatically triggers `.github/workflows/deploy.yml`, compiling `./dist` and pushing to the `gh-pages` branch.
-
-### Option B: Manual Command-Line Deployment
-Deploy directly to `gh-pages` from your terminal using the `gh-pages` CLI script:
-```bash
-npm run deploy
-```
+- `npm run dev` — Starts local development server with HMR.
+- `npm run build` — Compiles TypeScript and builds production artifacts into `./dist`.
+- `npm run preview` — Locally previews the built static site.
+- `npm run test` — Runs unit tests using Vitest.
+- `npm run deploy` — Compiles and deploys `./dist` to the `gh-pages` branch.
 
 ---
 
-## 👤 Author & Maintainer
+## Architecture & Performance
 
-**Soham Tilekar**
-- Email: [sohamtilekar233@gmail.com](mailto:sohamtilekar233@gmail.com)
-- GitHub: [@sohamtilekar233](https://github.com/sohamtilekar233)
+> [!NOTE]
+> DiffLens is built for zero-latency handling of high-resolution images up to 8K.
+
+- **On-Demand Rendering**: Canvas repaints are scheduled via `requestAnimationFrame` strictly when visual state changes occur, avoiding continuous idle CPU utilization.
+- **Cached Canvas Patterns**: Checkerboard transparency backgrounds are pre-rendered into a cached `CanvasPattern` tile instead of thousands of individual `fillRect` calls per frame.
+- **Memory Management**: Images are loaded as `blob:` URLs via `URL.createObjectURL(file)`, preventing browser memory bloat and tab crashes associated with large Base64 strings.
 
 ---
 
-## 📄 License
-This project is licensed under the [MIT License](LICENSE).
+## Deployment
+
+DiffLens is configured for deployment to GitHub Pages via the `gh-pages` branch.
+
+- **Automated Deployment**: Pushing to the `main` branch triggers `.github/workflows/deploy.yml`, which builds the project and deploys to the `gh-pages` branch automatically.
+- **Manual Deployment**: Run `npm run deploy` to manually publish `./dist` to `gh-pages`.
